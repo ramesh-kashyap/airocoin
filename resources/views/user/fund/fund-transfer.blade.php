@@ -1,178 +1,62 @@
-<article>
+<div class="deposit-form__body">
+    <style>
+        .pay-method-widget__inner {
+            border: 1px solid #2bf3c3;
+        }
+    </style>
+    <div class="deposit-form__cell" style="width: 100%">
+           <form action="{{ route('user.fundtransferSubmit') }}" method="post" >
+                {{ csrf_field() }}    
+        <div class="pay-amount-card deposit-form__pay-amount-card">
+        
+         
+            <div class="pay-amount-card__header">
+                <div class="number-title-row">
+                    <div class="number-title-row__inner">
+                        <div class="number-title-row__number"> 01 </div>
+                        <div class="title-h5 number-title-row__title-h5">  Internal Transfer to Activation Wallet
+                        </div>
+                    </div>
+                </div>
 
-
-<style>
-    .closed  p {
-    top: 0;
-    cursor: pointer;
-    left: 0;
-    padding: 3px 7px !important;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    white-space: nowrap;
-    border: 1px solid var(--white);
-    box-shadow: 0 1px 51px 0 rgba(24, 186, 154, 0.49);
-}
-</style>
-
-    <section class="settings">
-    
-        <section class="account global__item">
-            <div class="account__decoration">
-                <img class="icon-svg" src="{{ asset('') }}frontend/img/cabinet/ellipse/ellipse_pink-settings.svg"
-                    alt="ellipse">
-            </div>
-
-            <div class="account__header">
-               Income Wallet :   {{ currency() }}{{ number_format(Auth::user()->available_balance(), 2) }}
             </div>
             
-   <div class="account__header">
-                Internal Transfer to Activation Wallet
+            <div class="pay-amount-card__input-row">
+                <div class="form-label-row"><label for="" class="form-label-row__label"> Enter Amount
+                    </label> <span class="form-label-row__value color-gray"><span class="js-min">10</span> - <span
+                            class="js-max">100000</span> <span class="js-currs-slug">USDT</span></span></div>
+                <div class="form-input-row">
+                    <div class="form-input-row__prepend"><svg width="40" height="40" class="js-ps-svg">
+                            <use xlink:href="#gate-usdt" href="#gate-usdt"></use>
+                        </svg> </div>
+                    <div class="form-input-row__append js-currs-slug">USDT</div> <input type="text"
+                        id="deposit_form_amount" name="amount" required=""
+                        class="form-control form-control-xl form-control">
+                </div>
             </div>
+          <div class="pay-method-list pay-method-card__pay-method-list">
+               
 
-            <form action="{{ route('user.fundtransferSubmit') }}" method="post" id="form_4" >
-                {{ csrf_field() }}
-                <div class="line">
-                    <label>
-                        <p >
-                            Enter Amount
-                        </p>
-
-                        <div class="bg-input">
-                            <input  id="inputEmail3" placeholder="Enter Amount" class="change-amount1" type="text" name="amount">
-
-                           
+                    <div class="password-form__input-row"><label for="password_form_old_password" class="form-label">  Transaction Password<span class="color-green">*</span> </label>
+                        <div class="form-input-row">
+                            <div class="form-input-row__append"><button class="password-btn js-password-btn"
+                                    type="button" data-target="#password_form_old_password"><svg width="24"
+                                        height="24" class="password-btn__hidden-icon">
+                                        <use xlink:href="#password-hidden"></use>
+                                    </svg> <svg width="24" height="24" class="password-btn__visible-icon">
+                                        <use xlink:href="#password-visible"></use>
+                                    </svg></button> </div> <input type="password" id="password_form_old_password"
+                                name="transaction_password" required=""
+                                class="form-control form-control-lg form-control" placeholder="Transaction Password">
                         </div>
-                    </label>
-                </div>
+                    </div>
+               
+            </div>
+            <div class="pay-amount-card__btn-row"><button class="btn btn-lg btn-success btn-xs-block submitBtn" >Confirm</button> </div>
+           
+        </div>
+         </form>
+    </div>
 
-                <div class="line">
-                    <label>
-                        <p >
-                            Transaction Password
-                        </p>
-                        <div class="bg-input">
-                            <input id="inputEmail3" placeholder="Transaction Password" type="password" name="transaction_password">
-
-                            
-                        </div>
-                    </label>
-                </div>
-
-               <div class="mm_err3" style="color: red; padding-bottom: 0px; font-size: 14px;"
-                                id="element_error"></div>
-
-                <div class="fa-code">
-
-                    <button class="btn submit-btn">
-                        <p>
-                            Confirm
-                        </p>
-                    </button>
-                </div>
-            </form>
-        </section>
-
-      
-    </article>
-
-
-
-  
-</article>
-
-
-
-<script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
-<script>
- 
-
-    $('.change-amount').keyup(function(e) {
-        var ths = $(this);
-        var amount = $(this).val();
-
-      
-
-       if (amount % 50 !== 0) {
-            $(".submit-btn").prop("disabled", true);   
-            $('#element_error').html('amount must be a multiple of 50 $').css('color', 'red');
-        }
-        else{
-            $(".submit-btn").prop("disabled", false);
-            $('#element_error').html('');
-        }
-
-    });
-
-
-
-    $('.check_sponsor_exist').keyup(function(e) {
-        var ths = $(this);
-        var res_area = $(ths).attr('data-response');
-        var sponsor = $(this).val();
-        // alert(sponsor); 
-        $.ajax({
-            type: "POST"
-            , url: "{{ route('getUserName') }}"
-            , data: {
-                "user_id": sponsor
-                , "_token": "{{ csrf_token() }}"
-            , }
-            , success: function(response) {
-                // alert(response);      
-                if (response != 1) {
-                    // alert("hh");
-                    $(".submit-btn").prop("disabled", false);
-                    $('#' + res_area).html(response).css('color', '#fff').css('font-weight', '800')
-                        .css('margin-buttom', '10px');
-                } else {
-                    // alert("hi");
-                    $(".submit-btn").prop("disabled", true);
-                    $('#' + res_area).html("User Not exists!").css('color', 'red').css(
-                        'margin-buttom', '10px');
-                }
-            }
-        });
-    });
-
-
-       
-           $('.first-code-send').click(function(e) {
-           var ths = $(this);
-
-         
-           // alert(sponsor); 
-           $.ajax({
-               type: "POST"
-               , url: "{{ route('user.send_code') }}"
-               , data: {
-                   "purpose": "Fund Transfer"
-                   , "_token": "{{ csrf_token() }}"
-               , }
-               , success: function(response) {
-                   // alert(response);      
-                   if (response) {
-                       // alert("hh");
-                       iziToast.success({
-                       message: 'Email send Successfully',
-                       position: "topRight"
-                   });
-                   } else {
-                       // alert("hi");
-                       iziToast.error({
-                       message: 'Error!',
-                       position: "topRight"
-                   });
-                   }
-               }
-           });
-       });
-       
-
-</script>
-
-<!--**********************************
-Content body end
-***********************************-->
+</div>
+</div>

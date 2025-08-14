@@ -9,9 +9,8 @@
             <div class="pay-amount-card__header">
                 <div class="number-title-row">
                     <div class="number-title-row__inner">
-                        <div class="number-title-row__number"> 01 </div>
-                        <div class="title-h5 number-title-row__title-h5"> Add Fund
- </div>
+                        <div class="number-title-row__number"> 03 </div>
+                        <div class="title-h5 number-title-row__title-h5"> Investment Amount </div>
                     </div>
                 </div>
                 <div class="pay-amount-card__selected"><span class="weight-600 font-size-15 color-white">Selected
@@ -39,8 +38,8 @@
             </div>
             <div class="pay-amount-card__input-row">
                 <div class="form-label-row"><label for="" class="form-label-row__label"> Enter Amount
-                    </label> <span class="form-label-row__value color-gray"><span class="js-min">10</span> - <span
-                            class="js-max">100000</span> <span class="js-currs-slug">USDT</span></span></div>
+                    </label> <span class="form-label-row__value color-gray"><span class="js-min">20</span> - <span
+                            class="js-max">2000</span> <span class="js-currs-slug">USDT</span></span></div>
                 <div class="form-input-row">
                     <div class="form-input-row__prepend"><svg width="40" height="40" class="js-ps-svg">
                             <use xlink:href="#gate-usdt" href="#gate-usdt"></use>

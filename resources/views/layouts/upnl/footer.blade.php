@@ -16,6 +16,7 @@
  </div>
  </div>
  </div>
+ @include('partials.notify')
  </div>
  <div class=messages-container>
      <div class=container-fluid>
@@ -62,62 +63,7 @@
      };
      xhr.send()
  </script>
- <script>
-     document.addEventListener('DOMContentLoaded', function() {
-         var pjaxOptions = {
-             fragment: '#js-pjax-container',
-             scrollTo: !1,
-             timeout: 3000
-         };
-         $.pjax.defaults.maxCacheLength = 0;
-         $(document).on('click', 'form[data-pjax] button[type="submit"][name]', function() {
-             var form = $(this).closest('form');
-             var buttonName = $(this).attr('name');
-             var buttonValue = $(this).attr('value');
-             var hiddenInput = form.find('input[type="hidden"][name="' + buttonName + '"]');
-             if (hiddenInput.length > 0) {
-                 hiddenInput.remove()
-             }
-             hiddenInput = $('<input>').attr('type', 'hidden').attr('name', buttonName).val(buttonValue);
-             form.append(hiddenInput)
-         }).pjax('a[data-pjax]', '#js-pjax-container', pjaxOptions).on('submit', 'form[data-pjax]', function(
-             event) {
-             $.pjax.submit(event, '#js-pjax-container', pjaxOptions)
-         }).on('pjax:clicked', function(options) {}).on('pjax:beforeReplace', function() {
-             pageDestroys.forEach(function(element) {
-                 (element)()
-             });
-             pageDestroys = []
-         }).on('pjax:beforeSend', function(event) {
-             $('.modal-backdrop').remove();
-             $('body').removeClass('modal-open');
-             $('#js-preloader').removeClass('ready');
-             if (!$(event.relatedTarget).hasClass('js-noscroll')) {
-                 setTimeout(function() {
-                     window.scrollTo({
-                         top: 0,
-                         left: 0
-                     })
-                 }, 10)
-             }
-         }).on('pjax:success', function(event, data) {}).on('pjax:error', function(event, xhr, textStatus,
-             errorThrown, options) {
-             options.success(xhr.responseText, textStatus, xhr);
-             return !1
-         }).on('pjax:end', function() {
-             pageInits.forEach(function(element) {
-                 (element)()
-             });
-             pageInits = []
-         }).on('pjax:complete', function() {
-             layoutInit();
-             $('#js-preloader').addClass('ready');
-             setTimeout(function() {
-                 $('#js-pjax-container').css('height', '')
-             })
-         })
-     })
- </script>
+ 
  <script>
      //(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
      //'https://dars1.ladesk.com/scripts/track.js',

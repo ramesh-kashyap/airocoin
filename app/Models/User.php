@@ -205,7 +205,7 @@ class User extends Authenticatable
 
 
     public function withdrawal(){
-        return $this->hasMany('App\Models\Withdraw','user_id','id')->where('walletType',1);
+        return $this->hasMany('App\Models\Withdraw','user_id','id');
     }
 
   public function Priciplewithdrawal(){

@@ -8,7 +8,7 @@
                                             <div class=total-balance-widget__inner>
                                                 <div class=total-balance-widget__ticker> $ </div>
                                                 <div class=total-balance-widget__balance>
-                                                    <div class=total-balance-widget__int> 0 </div>
+                                                    <div class=total-balance-widget__int>  {{ number_format(Auth::user()->available_balance() > 0 ? Auth::user()->available_balance() : 0, 2) }} </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -18,16 +18,18 @@
                                     </div>
                                 </div>
                                 <div class=user-balance-info-group__rank-cell>
-                                    <div class=user-balance-info-group__label> Your rank </div>
-                                    <div class="rank-badge user-balance-info-group__rank-badge">
-                                        <div class=rank-badge__inner><svg width=24 height=24>
-                                                <use xlink:href=#rank-bronze></use>
-                                            </svg> Bronze </div>
-                                    </div>
+                                    <div class=user-balance-info-group__label> Fund Wallet </div>
+                                   
+                                      <div class=total-balance-widget__inner>
+                                                <div class=total-balance-widget__ticker> $ </div>
+                                                <div class=total-balance-widget__balance>
+                                                    <div class=total-balance-widget__int> {{ number_format(Auth::user()->FundBalance(), 2) }} </div>
+                                                </div>
+                                            </div>
                                 </div>
                                 <div class=user-balance-info-group__offer-cell>
-                                    <div class=user-balance-info-group__label> Offer per day </div>
-                                    <div class=user-balance-info-group__offer-value> N/A </div>
+                                    <div class=user-balance-info-group__label> Status </div>
+                                    <div class=user-balance-info-group__offer-value>   {{Auth::user()->active_status}} </div>
                                 </div>
                                 <div class=user-balance-info-group__pnl-cell><button
                                         class="pnl-link js-open-pnl-modal"><svg width=24 height=24>
@@ -49,7 +51,7 @@
                                     <div class=user-balance-info-mobile-group__row>
                                         <div class=user-balance-info-mobile-group__label> Balance, total </div>
                                         <div class=user-balance-info-mobile-group__value><span
-                                                class=color-green>$0.0000</span>
+                                                class=color-green>$ {{ number_format(Auth::user()->available_balance() > 0 ? Auth::user()->available_balance() : 0, 2) }}</span>
                                             <div class=user-balance-info-mobile-group__helper><span
                                                     class="font-size-15 weight-600">Last 24h.</span> <span
                                                     class="font-size-15 weight-600 color-green"> +0% </span></div>
@@ -149,7 +151,7 @@
                                                 <div class=user-stats-card__help>
                                                     <div class="user-stats-card__label user-stats-card__label--sm">
                                                         Today: </div>
-                                                    <div class=user-stats-card__value> + $0.0000 </div>
+                                                    <div class=user-stats-card__value> + $ {{ number_format(Auth::user()->investment->where('sdate',Date("Y-m-d"))->sum('amount'), 2) }} </div>
                                                 </div>
                                             </div>
                                             <div class=user-stats-card__body>
@@ -159,7 +161,7 @@
                                                     <div class=total-balance-widget__inner>
                                                         <div class=total-balance-widget__ticker> $ </div>
                                                         <div class=total-balance-widget__balance>
-                                                            <div class=total-balance-widget__int> 0 </div>
+                                                            <div class=total-balance-widget__int> {{ number_format(Auth::user()->investment->sum('amount'), 2) }} </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -178,7 +180,7 @@
                                                 <div class=user-stats-card__help>
                                                     <div class="user-stats-card__label user-stats-card__label--sm">
                                                         Today: </div>
-                                                    <div class=user-stats-card__value> + $0.0000 </div>
+                                                    <div class=user-stats-card__value> + $ {{ number_format(Auth::user()->totalIncome->where('ttime',Date("Y-m-d"))->sum('comm'), 2) }} </div>
                                                 </div>
                                             </div>
                                             <div class=user-stats-card__body>
@@ -188,7 +190,7 @@
                                                     <div class=total-balance-widget__inner>
                                                         <div class=total-balance-widget__ticker> $ </div>
                                                         <div class=total-balance-widget__balance>
-                                                            <div class=total-balance-widget__int> 0 </div>
+                                                            <div class=total-balance-widget__int> {{ number_format(Auth::user()->totalIncome->sum('comm'), 2) }} </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -206,18 +208,18 @@
                                                     </svg> </div>
                                                 <div class=user-stats-card__help>
                                                     <div class="user-stats-card__label user-stats-card__label--sm">
-                                                        Partners: </div>
-                                                    <div class=user-stats-card__value> 0 </div>
+                                                        My Team: </div>
+                                                    <div class=user-stats-card__value>  {{ $total_team }}     </div>
                                                 </div>
                                             </div>
                                             <div class=user-stats-card__body>
-                                                <div class=user-stats-card__label> Total turnover </div>
+                                                <div class=user-stats-card__label> Level Bonus </div>
                                                 <div
                                                     class="total-balance-widget total-balance-widget--sm user-stats-card__total-balance-widget">
                                                     <div class=total-balance-widget__inner>
                                                         <div class=total-balance-widget__ticker> $ </div>
                                                         <div class=total-balance-widget__balance>
-                                                            <div class=total-balance-widget__int> 0 </div>
+                                                            <div class=total-balance-widget__int>  {{ number_format(Auth::user()->sponsorship_bonus->sum('comm'), 2) }} </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -236,17 +238,17 @@
                                                 <div class=user-stats-card__help>
                                                     <div class="user-stats-card__label user-stats-card__label--sm">
                                                         Today: </div>
-                                                    <div class=user-stats-card__value> + $0.0000 </div>
+                                                    <div class=user-stats-card__value> + ${{ number_format(Auth::user()->withdrawal->where('wdate',Date("Y-m-d"))->sum('amount'), 2) }} </div>
                                                 </div>
                                             </div>
                                             <div class=user-stats-card__body>
-                                                <div class=user-stats-card__label> Total bonus </div>
+                                                <div class=user-stats-card__label> Total Withdrawals </div>
                                                 <div
                                                     class="total-balance-widget total-balance-widget--sm user-stats-card__total-balance-widget">
                                                     <div class=total-balance-widget__inner>
                                                         <div class=total-balance-widget__ticker> $ </div>
                                                         <div class=total-balance-widget__balance>
-                                                            <div class=total-balance-widget__int> 0 </div>
+                                                            <div class=total-balance-widget__int> {{ number_format(Auth::user()->withdrawal->sum('amount'), 2) }}</div>
                                                         </div>
                                                     </div>
                                                 </div>
