@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Jackhill';
+    src: url('Jackhill.eot.html');
+    src: local('Jackhill'),
+        url('Jackhill.eot%EF%B9%96.html#iefix') format('embedded-opentype'),
+        url('Jackhill.woff2') format('woff2'),
+        url('Jackhill.woff') format('woff'),
+        url('Jackhill.ttf') format('truetype');
+    /* font-weight: normal; */
+    font-style: normal;
+    font-display: swap;
+}

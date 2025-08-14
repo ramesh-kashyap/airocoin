@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="wallet" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 46 46"
+	 style="enable-background:new 0 0 46 46;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#007BE4;}
+</style>
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" height="42.9" width="42.9" x="1.6" y="0"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<path class="st0" d="M23,3.1c11.8,0,21.5,9.6,21.5,21.5C44.5,36.4,34.9,46,23,46C11.2,46,1.6,36.4,1.6,24.6
+	C1.6,12.7,11.2,3.1,23,3.1z"/>
+<path id="Фигура_767_1" class="st1" d="M21.8,37.6l-10-25l19,3.5l0,0l5,4.7L21.8,37.6z M15.3,16.5l6.5,16.1l1.2-9.8L15.3,16.5
+	z M24.7,23.5l-1.1,9.3l8.8-10.7L24.7,23.5z M28.4,17.4l-11.9-2.1l7.3,6L28.4,17.4z M26.4,21.4l6.3-1.1l-2.3-2.2L26.4,21.4z"/>
+</svg>

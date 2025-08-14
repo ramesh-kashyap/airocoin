@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Uniform Pro";
+    src: url("UniformPro-Blk.eot");
+    src: url("UniformPro-Blkd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Blk.woff2") format("woff2"),
+        url("UniformPro-Blk.woff") format("woff"), url("UniformPro-Blk.ttf") format("truetype"),
+        url("UniformPro-Blk.svg#UniformPro-Blk") format("svg");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Uniform Pro";
+    src: url("UniformPro-Bld.eot");
+    src: url("UniformPro-Bldd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Bld.woff2") format("woff2"),
+        url("UniformPro-Bld.woff") format("woff"), url("UniformPro-Bld.ttf") format("truetype"),
+        url("UniformPro-Bld.svg#UniformPro-Bld") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Uniform Pro";
+    src: url("UniformPro-Thn.eot");
+    src: url("UniformPro-Thnd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Thn.woff2") format("woff2"),
+        url("UniformPro-Thn.woff") format("woff"), url("UniformPro-Thn.ttf") format("truetype"),
+        url("UniformPro-Thn.svg#UniformPro-Thn") format("svg");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Uniform Pro";
+    src: url("UniformPro-Reg.eot");
+    src: url("UniformPro-Regd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Reg.woff2") format("woff2"),
+        url("UniformPro-Reg.woff") format("woff"), url("UniformPro-Reg.ttf") format("truetype"),
+        url("UniformPro-Reg.svg#UniformPro-Reg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Uniform Pro Ultra";
+    src: url("UniformPro-Ult.eot");
+    src: url("UniformPro-Ultd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Ult.woff2") format("woff2"),
+        url("UniformPro-Ult.woff") format("woff"), url("UniformPro-Ult.ttf") format("truetype"),
+        url("UniformPro-Ult.svg#UniformPro-Ult") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Uniform Pro";
+    src: url("UniformPro-Med.eot");
+    src: url("UniformPro-Medd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Med.woff2") format("woff2"),
+        url("UniformPro-Med.woff") format("woff"), url("UniformPro-Med.ttf") format("truetype"),
+        url("UniformPro-Med.svg#UniformPro-Med") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Uniform Pro";
+    src: url("UniformPro-Lgt.eot");
+    src: url("UniformPro-Lgtd41d.eot?#iefix") format("embedded-opentype"), url("UniformPro-Lgt.woff2") format("woff2"),
+        url("UniformPro-Lgt.woff") format("woff"), url("UniformPro-Lgt.ttf") format("truetype"),
+        url("UniformPro-Lgt.svg#UniformPro-Lgt") format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

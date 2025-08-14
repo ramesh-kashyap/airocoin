@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Codec';
+  src: url('CodecCold-Regular.eot');
+  src: local('Codec Cold Regular'), local('Codec-Cold-Regular'),
+      url('CodecCold-Regular%EF%B9%96.eot#iefix') format('embedded-opentype'),
+      url('CodecCold-Regular.woff2') format('woff2'),
+      url('CodecCold-Regular.woff') format('woff'),
+      url('CodecCold-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Codec';
+  src: url('CodecCold-Bold.eot');
+  src: local('Codec Cold Bold'), local('Codec-Cold-Bold'),
+      url('CodecCold-Bold%EF%B9%96.eot#iefix') format('embedded-opentype'),
+      url('CodecCold-Bold.woff2') format('woff2'),
+      url('CodecCold-Bold.woff') format('woff'),
+      url('CodecCold-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

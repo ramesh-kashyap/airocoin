@@ -1,0 +1,101 @@
+/*reset*/
+
+html, body,
+label, input,
+button, textarea,
+h1, h2, h3, h4, h5, h6,
+ul, ol, p, a, blockquote,
+figure {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+html, body {
+	/* display: initial; */
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+label, input, button, textarea,select {
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+textarea {
+	resize: unset;
+}
+
+input,
+button { 
+  -webkit-appearance: none;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+label, input,select, button, textarea, a, ul, ol, h1, h2, h3, h4, h5, h6, p, blockquote {
+	font: inherit;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+* body *,
+body *,
+*,* body *:before,
+body *:before,
+*:before,* body *:after,
+body *:after,
+*:after {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+input::-webkit-input-placeholder       {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+input::-moz-placeholder                {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+input:-moz-placeholder                 {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+input:-ms-input-placeholder            {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+
+input:focus::-webkit-input-placeholder {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+input:focus::-moz-placeholder          {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+input:focus:-moz-placeholder           {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+input:focus:-ms-input-placeholder      {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+
+textarea::-webkit-input-placeholder       {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease;}
+textarea::-moz-placeholder                {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease;}
+textarea:-moz-placeholder                 {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease;}
+textarea:-ms-input-placeholder            {font-family: 'RedHat', sans-serif; color: var(--placeholder); transition: color .3s ease;}
+
+textarea:focus::-webkit-input-placeholder {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease;}
+textarea:focus::-moz-placeholder          {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease;}
+textarea:focus:-moz-placeholder           {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease;}
+textarea:focus:-ms-input-placeholder      {font-family: 'RedHat', sans-serif; color: var(--placeholder_transparent); transition: color .3s ease;}
