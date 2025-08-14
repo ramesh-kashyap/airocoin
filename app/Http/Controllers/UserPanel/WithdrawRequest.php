@@ -87,25 +87,36 @@ class WithdrawRequest extends Controller
          }
          else
          {
-         $tokenPrice =135;      
          
-        //  if($request->paymentMode=="AIRO")    
-        //  {
+         if($request->paymentMode=="BDC")    
+         {
           
-        //   $url = "https://api.geckoterminal.com/api/v2/simple/networks/bsc/token_price/0xf3c3c5a043b1bd8488a1cf838d363f7b24d185bc";
+          $url = "https://api.geckoterminal.com/api/v2/simple/networks/solana/token_price/CqMybyWjNGn2FGt1JY5HDUGMiCpQjAsyj44csfMUpump";
       
-        // // Make API Request
-        // $response = Http::get($url);
-        //  if ($response->successful()) {
-        // $data = $response->json();
+        // Make API Request
+        $response = Http::get($url);
+         if ($response->successful()) {
+        $data = $response->json();
 
-        // // Extract token price using contract address
-        // $contractAddress = "0xf3c3c5a043b1bd8488a1cf838d363f7b24d185bc";
-        // $tokenPrice = $data['data']['attributes']['token_prices'][$contractAddress] ?? null;   
-        //  }
+        // Extract token price using contract address
+        $contractAddress = "CqMybyWjNGn2FGt1JY5HDUGMiCpQjAsyj44csfMUpump";
+        $tokenPrice = $data['data']['attributes']['token_prices'][$contractAddress] ?? null;   
+        // dd($tokenPrice);
+          $amount = $request->amount;
+          $netAmount = $amount - $amount*10/100;
+        $bdcprice = round($tokenPrice, 5);
+         $finalAiro = round($netAmount / $bdcprice,4);
+         }
          
 
-        //      }
+             }
+             else{
+       $amount = $request->amount;
+       $netAmount = $amount - $amount*10/100;
+       
+        $tokenPrice =135;
+        $finalAiro = round($netAmount / $tokenPrice,4);
+             }
         //  $airo = $request->value_crypto1;
         //  $dairo = $airo * 0.10;
         //  $actualAiro = number_format($airo - $dairo, 2, '.', '');
@@ -113,8 +124,7 @@ class WithdrawRequest extends Controller
         $deduction = $amount * 0.10;
         $actualAmount = number_format($amount - $deduction, 2, '.', '');
         $deductionPercent = 10;
-        $airoValue = $amount / $tokenPrice;
-        $finalAiro = $airoValue - ($airoValue * $deductionPercent / 100);
+        
           if(!empty($account))
               {
               if (Hash::check($password, $user->tpassword))
