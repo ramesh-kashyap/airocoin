@@ -243,35 +243,35 @@
                                     <use xlink:href=#carret-left></use>
                                 </svg> </button></div>
                         <div class="user-sidebar user-left-side__user-sidebar">
-                            <div class=user-sidebar__item><a href="{{route('user.dashboard')}}"
+                            <div class=user-sidebar__item><a href="{{ route('user.dashboard') }}"
                                     class="sidebar-link user-sidebar__sidebar-link js-link-user-dashboard"
                                     data-pjax=""><svg width=24 height=24 class=sidebar-link__icon>
                                         <use xlink:href=#sidebar-dashboard></use>
                                     </svg>
                                     <div class=sidebar-link__content> Dashboard </div>
                                 </a> </div>
-                            <div class=user-sidebar__item><a href="{{route('user.autoinvest')}}"
+                            <div class=user-sidebar__item><a href="{{ route('user.autoinvest') }}"
                                     class="sidebar-link user-sidebar__sidebar-link js-link-user-deposit"
                                     data-pjax=""><svg width=24 height=24 class=sidebar-link__icon>
                                         <use xlink:href=#sidebar-deposit></use>
                                     </svg>
                                     <div class=sidebar-link__content> Make Investment </div>
                                 </a> </div>
-                            <div class=user-sidebar__item><a href={{route('user.fund_transfer')}}
+                            <div class=user-sidebar__item><a href={{ route('user.fund_transfer') }}
                                     class="sidebar-link user-sidebar__sidebar-link js-link-user-deposits"
                                     data-pjax=""><svg width=24 height=24 class=sidebar-link__icon>
                                         <use xlink:href=#sidebar-deposits></use>
                                     </svg>
                                     <div class=sidebar-link__content> Transfer Fund </div>
                                 </a> </div>
-                            <div class=user-sidebar__item><a href=/user/wallet/usdt
+                            <div class=user-sidebar__item><a href="{{route('user.Withdraw')}}"
                                     class="sidebar-link user-sidebar__sidebar-link js-link-user-wallet"
                                     data-pjax=""><svg width=24 height=24 class=sidebar-link__icon>
                                         <use xlink:href=#sidebar-wallet></use>
                                     </svg>
-                                    <div class=sidebar-link__content> Your Wallet </div>
+                                    <div class=sidebar-link__content> Withdraw </div>
                                 </a> </div>
-                            <div class=user-sidebar__item><a href={{route('user.referral-team')}}
+                            <div class=user-sidebar__item><a href={{ route('user.referral-team') }}
                                     class="sidebar-link user-sidebar__sidebar-link js-link-user-affiliate"
                                     data-pjax=""><svg width=24 height=24 class=sidebar-link__icon>
                                         <use xlink:href=#sidebar-affiliate></use>
